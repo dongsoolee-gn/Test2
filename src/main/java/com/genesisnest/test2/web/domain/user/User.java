@@ -3,13 +3,13 @@ package com.genesisnest.test2.web.domain.user;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+/*
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
-@Entity
+//@Entity
 public class User{ //extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,3 +49,4 @@ public class User{ //extends BaseTimeEntity {
 
 
 }
+*/
