@@ -13,3 +13,8 @@ cache:
 
 script: "./gradlew clean build"
 #CI
+
+notifications:
+  email:
+    recipients:
+      - dongsoo.lee@genesisnest.com
