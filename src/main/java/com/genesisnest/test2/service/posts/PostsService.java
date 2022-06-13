@@ -5,6 +5,7 @@ import com.genesisnest.test2.web.domain.posts.PostsRepository;
 import com.genesisnest.test2.web.dto.PostsSaveRequestDto;
 import com.genesisnest.test2.web.dto.PostsUpdateRequestDto;
 import com.genesisnest.test2.web.dto.PostsResponseDto;
+import com.genesisnest.test2.web.dto.PostsListResponseDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -38,6 +41,20 @@ public class PostsService {
         Posts entity = postsRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("해당게시글이 없습니다. id=" + id));
 
         return new PostsResponseDto(entity);
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void Delete(Long id) {
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("No matchedArticle id= " + id ));
+
+        postsRepository.delete(posts);
     }
 
 }
