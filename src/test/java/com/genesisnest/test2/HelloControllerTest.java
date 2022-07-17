@@ -18,7 +18,7 @@ import  static org.hamcrest.Matchers.is;
 
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
-    @Autowired
+   /* @Autowired
     private MockMvc mvc;
 
     @Test
@@ -30,7 +30,7 @@ public class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(hello));
     }
-/*
+
     @Test
     public void returnHelloDto() throws Exception{
         String name = "hello";
