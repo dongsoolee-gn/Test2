@@ -24,7 +24,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 public class PostsRepositoryTest {
-
+/*
     @Autowired
     PostsRepository postsRepository;
 
@@ -50,4 +50,6 @@ public class PostsRepositoryTest {
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(contennt);
     }
+
+ */
 }

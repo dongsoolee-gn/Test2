@@ -9,13 +9,13 @@ public class HelloResponseDtoTest {
     @Test
     public void rombok_Test() {
 
-        String name = "test";
-        int amount = 1000;
+       // String name = "test";
+        //int amount = 1000;
 
-        HelloResponseDto dto = new HelloResponseDto(name, amount);
+        //HelloResponseDto dto = new HelloResponseDto(name, amount);
 
-        assertThat(dto.getName()).isEqualTo(name);
-        assertThat(dto.getAmount()).isEqualTo(amount);
+       // assertThat(dto.getName()).isEqualTo(name);
+       // assertThat(dto.getAmount()).isEqualTo(amount);
 
 
     }
